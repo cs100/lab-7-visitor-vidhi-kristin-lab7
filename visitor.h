@@ -1,3 +1,26 @@
+#ifndef __VISITOR_H__
+#define __VISITOR_H__
+#include <iostream>
+#include <string>
+#include <sstream>
+
+#include "composite.h"
+
+class Op; 
+
+class Visitor{
+	public:
+		Visitor() {};
+		virtual void rootNode() = 0;
+		virtual void sqrNode() = 0;
+		virtual void multNode() = 0;
+		virtual void subNode() = 0;
+		virtual void addNode() = 0;
+		virtual void execute() = 0;
+		virtual void opNode(Op* op) = 0;
+		
+};
+
 class PrintVisitor : public Visitor {
 	private:
 		std::string output;
@@ -14,3 +37,4 @@ class PrintVisitor : public Visitor {
 
 		void execute();		//Prints all visited nodes
 };
+ #endif
