@@ -78,6 +78,7 @@ Base* OperatorIterator::current() {
 
 
 
+s
 void UnaryIterator::first() {
     current_ptr = self_ptr->get_left();
 }

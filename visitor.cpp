@@ -1,5 +1,6 @@
 #include "visitor.h"
 
+
 void PrintVisitor::rootNode(){
     return;
 }

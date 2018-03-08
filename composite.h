@@ -5,6 +5,7 @@
 #include <sstream>
 #include <math.h>
 #include <string>
+
 #include "iterator.h"
 #include "visitor.h"
 
