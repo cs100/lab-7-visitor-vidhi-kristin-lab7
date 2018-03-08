@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "composite.h"
+#include "visitor.h"
 
 using namespace std;
 
@@ -29,7 +30,7 @@ cout << endl;
         Visitor* vis = new PrintVisitor();
         for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next()) {
                 pre_itr->current()->print();
-		pre_itr->current()->accept(vis);
+				pre_itr->current()->accept(vis);
                 cout << endl;
         }
 vis->execute();
