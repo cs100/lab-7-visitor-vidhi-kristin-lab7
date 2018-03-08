@@ -14,16 +14,27 @@ int main() {
 	Sub* sub = new Sub(add, sqr);
 	Root* root = new Root(sub);
 
-cout << "Full Equation: (3 + 4) - (2 ^ 2)" << endl; 
+cout << "\nFull Equation: (3 + 4) - (2 ^ 2)" << endl; 
 
-	cout << "--- PreOrder Iteration ---" << endl;
+	cout << "\n--- PreOrder Iteration ---" << endl;
 	PreorderIterator* pre_itr = new PreorderIterator(root);
 	for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next()) {
 		pre_itr->current()->print();
 		cout << endl;
 	}
-	};
+cout << endl;
 
+
+	cout << "\n---Visitor Iteration ---" << endl;
+        Visitor* vis = new PrintVisitor();
+        for(pre_itr->first(); !pre_itr->is_done(); pre_itr->next()) {
+                pre_itr->current()->print();
+		pre_itr->current()->accept(vis);
+                cout << endl;
+        }
+vis->execute();
+cout << endl;
+};
 
 	//******************************************************
 		
