@@ -1,3 +1,6 @@
+# **Completed and Archived in Winter 2018
+
+
 # Visitor Pattern
 ## Author: Brian Crites
 **You *must* work in a group of two for this lab**
